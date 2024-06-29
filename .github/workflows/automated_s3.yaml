@@ -1,0 +1,16 @@
+name: Update wesbite Content
+
+on:
+  push:
+    branches:
+      - main 
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+      - name: Deploy to S3
+        run: |
+          aws s3 sync ./website_code s3://my-portfolio-website-bucket-ml-ai --delete
