@@ -18,4 +18,5 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: 'us-east-2'
           aws-bucket: ${{ secrets.AWS_BUCKET }}
+          destination-dir: '/'
           file-path: 'website_code/index.html'
